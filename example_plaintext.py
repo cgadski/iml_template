@@ -1,7 +1,7 @@
 # %% [markdown]
 # # Plaintext Assignment
 #
-# Build this with `make build/example_plaintext.py`.
+# Build this with `make build/example_plaintext.html`.
 #
 # Everything works as usual, including $\LaTeX.$
 
