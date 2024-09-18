@@ -14,10 +14,9 @@ dependencies:
   - jupytext # Sync notebook <-> plaintext
 
   # Other dependencies
-  - seaborn # more plots, delegates for matplotlib
-  - black # formatting your code
-  - einops # operate on arrays with Einstein notation
-  - scipy # various scientific computing things
-  - pip # python package manager
-  - pip: [] # dependencies to be installed through pip go here
-
+  - seaborn # More plots, delegates to matplotlib
+  - black # Formatting your code
+  - einops # Operate on arrays with Einstein notation
+  - scipy # Various scientific computing things
+  - pip # Python package manager
+  - pip: [] # Dependencies to be installed through pip go here
