@@ -2,10 +2,11 @@ channels:
   - conda-forge
 dependencies:
   # Absolutely necessary
-  - python=3.12
+  - python=3.11
   - numpy=2.1 # For processing arrays
   - pandas=2.2 # Processing "data frames" (tables)
   - matplotlib # For plots
+  - scikit-learn # Scipy-based ML stuff
 
   # Notebook
   - jupyterlab
