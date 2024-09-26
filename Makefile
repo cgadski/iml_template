@@ -1,8 +1,11 @@
-.PHONY: clean fmt
+.PHONY: clean fmt upload
 
 fmt:
 	black *.py
 	black util/
+
+upload: build/ex_26_09.html
+	scp $^ root@cgad.ski:/www/iml/
 
 clean:
 	rm -rf build/
@@ -13,4 +16,3 @@ clean:
 
 build/%.html: %.ipynb
 	jupyter nbconvert --output-dir=build $^ --to html --execute
-

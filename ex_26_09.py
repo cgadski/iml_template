@@ -63,6 +63,10 @@ plt.show()
 # \frac{d}{dx} \sin(\lambda x) = \lambda \cos(x).
 # $$
 #
+# Actually, we can still find decent approximations for the derivative
+# in the presence of noise. We just need to "filter out" the high frequencies.
+# (Can you think how we might do that?)
+#
 # What if I want to integrate my function over its domain?
 # Remember that
 # $$
@@ -253,7 +257,8 @@ print((x @ np.array([0, 0, 1/sqrt(2), 1/sqrt(2)])).var())
 def principal_components(x, k):
     zero_bias = x - x.mean(axis=0)
     cov = zero_bias.T @ zero_bias
-    return np.linalg.eigh(cov).eigenvectors[:, -k:] # Learn slices for index!
+    return np.linalg.eigh(cov).eigenvectors[:, -k:]
+        # Make sure you know how to use slices! ^
 
 components = principal_components(x, 2)
 components
