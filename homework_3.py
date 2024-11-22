@@ -147,9 +147,9 @@ problem.show()
 # ## Problem 3
 # > Now, let's solve a non-linear regression problem using a very simple neural network with a fixed (untrainable) hidden layer.
 # >
-# > Let $(r_i)_{i = 1}^d$ be a sequence of $d$ "reference inputs" and like $x$ be the input to the network. For each $i = 1, \dots, n,$ let the hidden neuron $h_i$ equal $1$ if $r_i$ is the reference input closest to $x$ and $0$ otherwise. Finally, let the output $y$ of the network be a linear combination
+# > Let $(r_i)_{i = 1}^d$ be a sequence of $d$ "reference inputs" and let $x$ be the input to the network. For each $i = 1, \dots, d,$ let the hidden neuron $h_i$ equal $1$ if $r_i$ is the reference input closest to $x$ and $0$ otherwise. Finally, let the output $y$ of the network be a linear combination
 # > $$
-# y = \sum_{i = 1}^n w_i h_i.
+# y = \sum_{i = 1}^d w_i h_i.
 # $$
 # >
 # > The following code implements such a network. **Analytically derive the optimal weights $w_i$ for this network under a squared error loss.** What is this network really learning? _(3 points)_
