@@ -120,14 +120,6 @@ class RegressionProblem:
         plt.plot(x_sample, self.model(x_sample))
 
 
-class AffineEmbed(Module):
-    def forward(self, x):
-        return np.concat([np.ones((x.shape[0], 1)), x], axis=1)
-
-    def backward(self, dy):
-        return dy[:, 1:]
-
-
 # %% [markdown]
 # > Using your implementation of `Linear` above, **define a `Sequential` model that learns a function of the form $y = a x + b$** by applying a suitable "embedding" before your linear layer. (Define a module to perform your embedding.) Does the embedding need a backward pass? _(3 points)_
 
@@ -316,7 +308,7 @@ problem = ClassificationProblem(model=make_classifier())
 problem.show()
 
 # %% [markdown]
-# ## Problem 6 (4 points)
+# ## Problem 6 (Bonus)
 # > Build a neural network that can learn addition modulo 10. The architecture is up to you!
 # >
 # > Requirements:
@@ -325,7 +317,7 @@ problem.show()
 # > - Reserve a very small fraction of data points to compute test loss.
 # > - Graph test loss and training loss over many epochs of full-batch gradient descent.
 # >
-# > For full points, test loss should drop to 0.
+# > For full points, test loss should drop to 0. _(4 points)_
 
 
 # %%
